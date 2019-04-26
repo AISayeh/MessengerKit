@@ -170,6 +170,8 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
             footer.delegate = self
             footer.title = dataSource?.footerTitle(for: indexPath.section)
             
+            collectionView.reloadData()
+            
             return footer
             
         default:
@@ -182,6 +184,8 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
             header.style = style
             header.delegate = self
             header.title = dataSource?.headerTitle(for: indexPath.section)
+            
+            collectionView.reloadData()
             
             return header
             
